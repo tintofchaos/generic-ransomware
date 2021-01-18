@@ -8,7 +8,6 @@ key = Fernet.generate_key()
 
 with open('mykey.key', 'wb') as mykey:
     mykey.write(key)
-print(key)
 f = Fernet(key)
 files = [None]
 def listdir():
