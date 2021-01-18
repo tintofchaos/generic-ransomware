@@ -1,0 +1,1 @@
+windows and unix have different root directories , unix has / and windows has c:/ each version of the ransomware works for different root directories

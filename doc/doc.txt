@@ -1,0 +1,3 @@
+How this ransomware works
+the ransomware generated a key then recusively list the files on the system then encryptes them with the key
+
